@@ -9,4 +9,5 @@
     (->files data
              [".gitignore"  (render "gitignore")]
              ["project.clj" (render "project.clj")]
-             ["README.md"   (render "README.md")])))
+             ["README.md"   (render "README.md")]
+             ["src/{{sanitized}}/handler.clj" (render "handler.clj")])))
