@@ -1,10 +1,12 @@
 (ns leiningen.new.compojure
-  (:use leiningen.new.templates))
+  (:use [leiningen.new.templates :only [renderer sanitize year ->files]]))
 
 (defn compojure
   "Create a new Compojure project"
   [name]
-  (let [data   {:name name, :sanitized (sanitize name)}
+  (let [data {:name name
+              :sanitized (sanitize name)
+              :year (year)}
         render #((renderer "compojure") % data)]
     (->files data
              [".gitignore"  (render "gitignore")]
