@@ -17,5 +17,3 @@ To start a web server for the application, run:
 ## License
 
 Copyright © {{year}} FIXME
-
-Distributed under the Eclipse Public License, the same as Clojure.
