@@ -9,7 +9,7 @@ A Leiningen template for projects using [Compojure][1].
 Add the following plugin to `~/.lein/profiles.clj`:
 
 ```clojure
-{:user {:plugins [[compojure-template "0.1.2"]]}}
+{:user {:plugins [[compojure-template "0.1.3"]]}}
 ```
 
 ## Usage
