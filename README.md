@@ -6,11 +6,14 @@ A Leiningen template for projects using [Compojure][1].
 
 ## Installation
 
-Add the following plugin to `~/.lein/profiles.clj`:
+If you're using Leiningen 1, you'll need to install the following plugins:
 
-```clojure
-{:user {:plugins [[compojure-template "0.1.3"]]}}
-```
+    lein plugin install lein-newnew 0.2.6
+    lein plugin install compojure/lein-template 0.1.3
+
+If you're using Leiningen 2, you don't have to do anything; the template
+will be automatically downloaded and installed when you first run the
+command.
 
 ## Usage
 
