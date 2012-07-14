@@ -12,4 +12,5 @@
              [".gitignore"  (render "gitignore")]
              ["project.clj" (render "project.clj")]
              ["README.md"   (render "README.md")]
-             ["src/{{sanitized}}/handler.clj" (render "handler.clj")])))
+             ["src/{{sanitized}}/handler.clj"       (render "handler.clj")]
+             ["test/{{sanitized}}/test/handler.clj" (render "handler_test.clj")])))
