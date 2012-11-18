@@ -1,4 +1,4 @@
-(defproject compojure/lein-template "0.2.1"
+(defproject compojure/lein-template "0.2.2"
   :description "Compojure project template for Leiningen"
   :url "https://github.com/weavejester/compojure-template"
   :eval-in-leiningen true
