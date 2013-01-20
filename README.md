@@ -9,7 +9,7 @@ A Leiningen template for projects using [Compojure][1].
 If you're using Leiningen 1, you'll need to install the following plugins:
 
     lein plugin install lein-newnew 0.2.6
-    lein plugin install compojure/lein-template 0.2.6
+    lein plugin install compojure/lein-template 0.2.7
 
 If you're using Leiningen 2, you don't have to do anything; the template
 will be automatically downloaded and installed when you first run the
