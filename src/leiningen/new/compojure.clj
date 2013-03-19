@@ -19,4 +19,5 @@
              ["project.clj" (render project-file)]
              ["README.md"   (render "README.md")]
              ["src/{{sanitized}}/handler.clj"       (render "handler.clj")]
-             ["test/{{sanitized}}/test/handler.clj" (render "handler_test.clj")])))
+             ["test/{{sanitized}}/test/handler.clj" (render "handler_test.clj")]
+             "resources/public")))
