@@ -6,4 +6,4 @@
   :plugins [[lein-ring "0.8.3"]]
   :ring {:handler {{name}}.handler/app}
   :profiles
-  {:dev {:dependencies [[ring-mock "0.1.3"]]}})
+  {:dev {:dependencies [[ring-mock "0.1.5"]]}})
