@@ -3,6 +3,6 @@
   :url "http://example.com/FIXME"
   :dependencies [[org.clojure/clojure "1.5.1"]
                  [compojure "1.1.6"]]
-  :plugins [[lein-ring "0.8.5"]]
+  :plugins [[lein-ring "0.8.7"]]
   :ring {:handler {{name}}.handler/app}
   :dev-dependencies [[ring-mock "0.1.5"]])
