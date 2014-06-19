@@ -1,7 +1,7 @@
 (ns {{name}}.handler
-  (:require [compojure.handler :as handler]
-            [compojure.route :as route]
-            [compojure.core :refer :all]))
+  (:require [compojure.core :refer :all]
+            [compojure.handler :as handler]
+            [compojure.route :as route]))
 
 (defroutes app-routes
   (GET "/" [] "Hello World")
