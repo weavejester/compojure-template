@@ -23,6 +23,6 @@ Run the following command to create a new Compojure project:
 
 ## License
 
-Copyright © 2013 James Reeves
+Copyright © 2014 James Reeves
 
 Distributed under the Eclipse Public License, the same as Clojure.
