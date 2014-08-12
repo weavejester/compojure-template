@@ -5,6 +5,7 @@
                  [compojure "1.1.8"]]
   :plugins [[lein-ring "0.8.11"]]
   :ring {:handler {{name}}.handler/app}
+  :min-lein-version "2.0.0"
   :profiles
   {:dev {:dependencies [[javax.servlet/servlet-api "2.5"]
                         [ring-mock "0.1.5"]]}})
