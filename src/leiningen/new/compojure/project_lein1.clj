@@ -2,7 +2,7 @@
   :description "FIXME: write description"
   :url "http://example.com/FIXME"
   :dependencies [[org.clojure/clojure "1.6.0"]
-                 [compojure "1.1.8"]]
+                 [compojure "1.1.9"]]
   :plugins [[lein-ring "0.8.11"]]
   :ring {:handler {{name}}.handler/app}
   :dev-dependencies [[javax.servlet/servlet-api "2.5"]
