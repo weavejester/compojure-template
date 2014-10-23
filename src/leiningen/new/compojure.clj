@@ -1,18 +1,24 @@
 (ns leiningen.new.compojure
-  (:use [leiningen.new.templates :only [renderer sanitize year name-to-path ->files]]))
+  (:require [leiningen.core.main :as main]
+            [leiningen.new.templates :refer [renderer year project-name
+                                             ->files sanitize-ns name-to-path
+                                             multi-segment]]))
+
+(def render (renderer "compojure"))
 
 (defn compojure
   "Create a new Compojure project"
   [name]
-  (let [data {:name name
-              :sanitized (sanitize name)
-              :path (name-to-path name)
-              :year (year)}
-        render #((renderer "compojure") % data)]
+  (let [main-ns (multi-segment (sanitize-ns name))
+        data    {:raw-name    name
+                 :name        (project-name name)
+                 :namespace   main-ns
+                 :dirs        (name-to-path main-ns)
+                 :year        (year)}]
     (->files data
              [".gitignore"  (render "gitignore")]
-             ["project.clj" (render "project.clj")]
-             ["README.md"   (render "README.md")]
-             ["src/{{path}}/handler.clj"       (render "handler.clj")]
-             ["test/{{path}}/test/handler.clj" (render "handler_test.clj")]
+             ["project.clj" (render "project.clj" data)]
+             ["README.md"   (render "README.md" data)]
+             ["src/{{dirs}}/handler.clj"       (render "handler.clj" data)]
+             ["test/{{dirs}}/handler_test.clj" (render "handler_test.clj" data)]
              "resources/public")))

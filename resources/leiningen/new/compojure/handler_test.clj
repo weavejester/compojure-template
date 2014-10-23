@@ -1,7 +1,7 @@
-(ns {{name}}.test.handler
+(ns {{namespace}}.handler-test
   (:require [clojure.test :refer :all]
-            [{{name}}.handler :refer :all]
-            [ring.mock.request :as mock]))
+            [ring.mock.request :as mock]
+            [{{namespace}}.handler :refer :all]))
 
 (deftest test-app
   (testing "main route"
