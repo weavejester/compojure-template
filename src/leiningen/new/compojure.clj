@@ -1,11 +1,5 @@
 (ns leiningen.new.compojure
-  (:use [leiningen.new.templates :only [renderer sanitize year name-to-path ->files]]
-        [leinjacker.utils :only [lein-generation]]))
-
-(def project-file
-  (if (= (lein-generation) 2)
-    "project_lein2.clj"
-    "project_lein1.clj"))
+  (:use [leiningen.new.templates :only [renderer sanitize year name-to-path ->files]]))
 
 (defn compojure
   "Create a new Compojure project"
@@ -17,7 +11,7 @@
         render #((renderer "compojure") % data)]
     (->files data
              [".gitignore"  (render "gitignore")]
-             ["project.clj" (render project-file)]
+             ["project.clj" (render "project.clj")]
              ["README.md"   (render "README.md")]
              ["src/{{path}}/handler.clj"       (render "handler.clj")]
              ["test/{{path}}/test/handler.clj" (render "handler_test.clj")]
