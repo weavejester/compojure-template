@@ -9,7 +9,7 @@
 (defn compojure
   "Create a new Compojure project"
   [name]
-  (let [main-ns (multi-segment (sanitize-ns name))
+  (let [main-ns (sanitize-ns name)
         data    {:raw-name    name
                  :name        (project-name name)
                  :namespace   main-ns
