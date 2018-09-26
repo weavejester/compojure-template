@@ -8,5 +8,5 @@
   :plugins [[lein-ring "0.12.4"]]
   :ring {:handler {{namespace}}.handler/app}
   :profiles
-  {:dev {:dependencies [[javax.servlet/servlet-api "3.1.0"]
+  {:dev {:dependencies [[javax.servlet/javax.servlet-api "3.1.0"]
                         [ring/ring-mock "0.3.2"]]}})
